@@ -1,7 +1,8 @@
 import myImg from "../assets/images/dev-pic.jpg"
+import Education from "../components/Education"
 // import Education from "../components/Education"
 import Experience from "../components/Experience"
-import Skills from "../components/Skills"
+import SkillAndCertifications from "../components/SkillAndCertifications"
 const About = () => {
   return (
     <>
@@ -22,7 +23,7 @@ const About = () => {
           </div>
           <div className="col-span-3 w-full h-full px-6 py-2 flex justify-center ">
             <div className="shadow-xl border mt-12 ">
-              <img src={myImg} alt="developer image" width={400}/>
+              <img src={myImg} alt="developer\'s image" width={400} />
             </div>
           </div>
           <div className="col-span-2 mt-10 px-6 py-2 flex flex-col items-end justify-between">
@@ -39,9 +40,10 @@ const About = () => {
               <h1 className="font-bold capitalize text-dark/75 text-lg">years of experiences</h1>
             </div>
           </div>
-        </div> 
-        <Skills />
+        </div>
+        <SkillAndCertifications />
         <Experience />
+        <Education />
       </main>
 
     </>
