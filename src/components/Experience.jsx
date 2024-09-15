@@ -40,39 +40,32 @@ const Experience = () => {
 
     const verisysWork = [
         {
-            bullet: "I was part of a collaborative team effort focused on developing a healthcare domain portal. "
+            bullet: "Built and automated web scraping bots to gather  professionals\' data from various sources, streamlining data collection processes."
         },
         {
-            bullet: "Developed a dedicated portal tailored to the needs of group insurance brokers, streamlining their interactions with the system."
+            bullet: "Utilized xPath and CSS selector techniques to interact with DOM elements and trigger JavaScript events, improving data extraction accuracy."
         },
         {
-            bullet: "Implemented end-to-end business flows, including quoting, enrollment, and contract renewal, providing a holistic platform for managing insurance operations."
+            bullet: "Optimized data processing by implementing Ruby transformation logic and Regular Expressions, enhancing processing speed by 30%."
         },
         {
-            bullet: "Designed the portal to accommodate three distinct group types: Small Groups, Large Groups, and Family and Individual policies, ensuring flexibility and customization."
+            bullet: "Performed peer code reviews that helped achieving the quality work significantly by 90%."
         },
         {
-            bullet: "Created robust maintenance flows, enabling quick and secure modification of various records, ensuring data accuracy and compliance with changing requirements."
+            bullet: "Collaborated with different stakeholders on Jira, then Azure DevOps as a part of agile development practice."
         },
 
     ]
     const pwcWork = [
         {
-            bullet: "I was part of a collaborative team effort focused on developing a healthcare domain portal. "
+            bullet: "Headed the development of a scalable web application using Express/Nodejs, implementing best practices for maintainability and extensibility."
         },
         {
-            bullet: "Developed a dedicated portal tailored to the needs of group insurance brokers, streamlining their interactions with the system."
+            bullet: "Implemented RESTful APIs with Express Framework, reducing integration time by 20% through seamless external service integration."
         },
         {
-            bullet: "Implemented end-to-end business flows, including quoting, enrollment, and contract renewal, providing a holistic platform for managing insurance operations."
+            bullet: "Utilized Postman for API testing, accelerating development cycles, and enhancing software quality."
         },
-        {
-            bullet: "Designed the portal to accommodate three distinct group types: Small Groups, Large Groups, and Family and Individual policies, ensuring flexibility and customization."
-        },
-        {
-            bullet: "Created robust maintenance flows, enabling quick and secure modification of various records, ensuring data accuracy and compliance with changing requirements."
-        },
-
     ]
 
     return (

@@ -10,10 +10,10 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
       },
       colors: {
-        dark: "#1b1b1b",
-        light: "#f5f5f5",
-        primary: "#B63E96", // 240,86,199
-        primaryDark: "#58E6D9", // 80,230,217
+        dark: "#1B1B1B",
+        light: "#E1F3FF",
+        primary: "#BE2B65", // 240,86,199
+        primaryDark: "#F7DF1E", // 80,230,217
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",
@@ -41,7 +41,7 @@ module.exports = {
           "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 40px)",
 
         circularDarkSm:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 4px,#1b1b1b 40px)"
+          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 4px,#1b1b1b 40px)",
       },
     },
     screens: {

@@ -34,17 +34,17 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 // mobile links
-const CustomMobileLink = ({ to, title, className = "", toggle }) => {
+const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   const location = useLocation();
 
   const handleClick = () => {
     toggle();
-    location.push(to);
+    location.push(href);
   };
 
   return (
-    <button
-      href={to}
+    <NavLink
+      to={href}
       className={`${className} relative group text-light dark:text-dark my-2`}
       onClick={handleClick}
     >
@@ -55,12 +55,12 @@ const CustomMobileLink = ({ to, title, className = "", toggle }) => {
              h-[1px] inline-block bg-light dark:bg-dark 
              absolute left-0 -bottom-0.5 
              group-hover:w-full transition-[width] ease duration-300
-             ${location.pathname === to ? "w-full" : "w-0"} dark:bg-dark 
+             ${location.pathname === href ? "w-full" : "w-0"} dark:bg-dark 
              `}
       >
         &nbsp;
       </span>
-    </button>
+    </NavLink>
   );
 };
 
@@ -72,34 +72,24 @@ export const Header = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className='w-full px-32 py-8 font-medium text-dark flex items-center justify-between'>
-      <button
-        className=" flex-col justify-center items-center hidden lg:flex"
-        onClick={handleClick}
-      >
-        <span
-          className={`bg-dark dark:bg-light  block transistion-all duration-300 ease-out h-0.5 w-6 rounded-sm -translate-y-0.5 ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
-            }`}
-        ></span>
-        <span
-          className={`bg-dark dark:bg-light  block transistion-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? "opacity-0" : "opacity-100"
-            }`}
-        ></span>
-        <span
-          className={`bg-dark  dark:bg-light block transistion-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
-            }`}
-        ></span>
+    <header className='w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8'>
+      
+      <button className=' flex-col justify-center items-center hidden lg:flex' onClick={handleClick}>
+        <span className={`bg-dark dark:bg-light  block transistion-all duration-300 ease-out h-0.5 w-6 rounded-sm -translate-y-0.5 ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
+        <span className={`bg-dark dark:bg-light  block transistion-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+        <span className={`bg-dark  dark:bg-light block transistion-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
       </button>
 
       {/* Desktop view */}
-      <nav>
+      <div className='w-full flex justify-between items-center lg:hidden' >
+        <nav>
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
         <CustomLink href="/projects" title="Projects" className="mx-4" />
         <CustomLink href="/contactus" title="Contact Us" className="ml-4" />
-      </nav>
+        </nav>
 
-      <div className="flex items-center justify-center flex-wrap ">
+        <nav className='flex items-center justify-center flex-wrap'>
         <motion.a href='https://twitter.com'
           target={'_blank'}
           whileHover={{ y: -2 }}
@@ -133,22 +123,17 @@ export const Header = () => {
           <DribbbleIcon />
         </motion.a>
 
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={`ml-5 flex items-center justify-center rounded-full p-0.5 
-                        ${mode === "light"
-              ? "bg-dark text-light"
-              : "bg-light text-dark"
-            }
+          <button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
+            className={`ml-5 flex items-center justify-center rounded-full p-0.5 
+                        ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}
                     
-                        `}
-        >
-          {mode === "dark" ? (
-            <MoonIcon className={"fill-dark"} />
-          ) : (
-            <SunIcon className={"fill-dark"} />
-          )}
-        </button>
+                        `}>
+            {
+              mode === 'dark' ? <MoonIcon className={'fill-dark'} /> : <SunIcon className={'fill-dark'} />
+            }
+          </button>
+        </nav>
+
       </div>
 
       {/* Mobile view */}
@@ -160,26 +145,11 @@ export const Header = () => {
                 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
         >
           {/* Page navigations */}
-          <nav className="flex items-center flex-col justify-center">
-            <CustomMobileLink
-              href="/"
-              title="Home"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/about"
-              title="About"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/projects"
-              title="Projects"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink href='/articles' title='Articles' className='' toggle={handleClick} />
+          <nav className='flex items-center flex-col justify-center'>
+            <CustomMobileLink href='/' title='Home' className='' toggle={handleClick} />
+            <CustomMobileLink href='/about' title='About' className='' toggle={handleClick} />
+            <CustomMobileLink href='/projects' title='Projects' className='' toggle={handleClick} />
+            {/* <CustomMobileLink href='/articles' title='Articles' className='' toggle={handleClick} /> */}
           </nav>
 
           {/* Social Icons */}

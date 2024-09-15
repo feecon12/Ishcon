@@ -14,23 +14,40 @@ import PwcDA from '../assets/images/certificates/digital-acumen.png'
 
 
 // eslint-disable-next-line no-lone-blocks
-{ /**Child components starts here */}
+{ /**Child components starts here */ }
 // eslint-disable-next-line react/prop-types
 const SkillsCard = ({ tech }) => {
   return (
     <>
-      <div className='w-[200px] shadow-xl border m-2 p-3 flex flex-col items-center justify-center'>
+      <motion.div className='w-[200px] shadow-xl border m-2 p-3 flex flex-col items-center justify-center dark:shadow-lg dark:shadow-slate-50 dark:rounded-lg rounded-lg '
+        whileHover={{ y: -2 }}
+        whileTap={{ scale: 0.9 }}>
         <img src={tech} alt="skills icon" />
         {/* <h1 className='text-md'>{title}</h1> */}
+      </motion.div>
+    </>
+  )
+}
+// eslint-disable-next-line react/prop-types
+const CertificateCard = ({ certificateName, verifyLink }) => {
+  return (
+    <>
+      <div className="flex flex-col items-center justify-between">
+        <motion.div className='w-[200px] shadow-xl border m-2 p-3 flex flex-col items-center justify-center dark:shadow-lg dark:shadow-slate-50 dark:rounded-lg rounded-lg '
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}>
+          <img src={certificateName} alt="certificate icon" />
+          {/* <h1 className='text-md'>{title}</h1> */}
+        </motion.div>
+        <a href={verifyLink} target="_blank" className="mt-3 text-lg">Verify</a>
       </div>
     </>
   )
 }
-
 const SkillList = () => {
   return (
     <>
-      <div className="mt-6 py-4 min-h-screen col-span-12 flex flex-col items-center px-32">
+      <div className="mt-6 py-4 flex flex-col items-center px-32">
         <div className="flex mt-2">
           <SkillsCard title="Javascript" tech={JsImg} />
           <SkillsCard title="ReactJs" tech={ReactImg} />
@@ -43,28 +60,15 @@ const SkillList = () => {
     </>
   )
 }
-
-// eslint-disable-next-line react/prop-types
-const CertificateCard = ({ certificateName }) => {
-  return (
-    <>
-      <div className='w-[200px] shadow-xl border m-2 p-3 flex flex-col items-center justify-center'>
-        <img src={certificateName} alt="certificate icon" />
-        {/* <h1 className='text-md'>{title}</h1> */}
-      </div>
-    </>
-  )
-}
-
 const CertificationList = () => {
   return (
     <>
       <div className='flex flex-col items-center'>
         <div className="flex">
-          <CertificateCard title="Javascript" certificateName={AwsCert} />
-          <CertificateCard title="ReactJs" certificateName={MsAzure} />
-          <CertificateCard title="NodeJS" certificateName={PwcHCD} />
-          <CertificateCard title="MongoDB" certificateName={PwcDA} />
+          <CertificateCard verifyLink={'https://www.credly.com/badges/b3d8247d-2b8e-46f2-9adb-fd0ed9be79ed/'} certificateName={AwsCert} />
+          <CertificateCard verifyLink={'https://learn.microsoft.com/api/credentials/share/en-us/FeeconBehera-2966/5B8137F8C7E1D33?sharingId=7538A1A860DF4211'} certificateName={MsAzure} />
+          <CertificateCard verifyLink="https://www.credly.com/badges/7aba4c79-21ec-4ca8-9ea4-16683c6eeed8" certificateName={PwcHCD} />
+          <CertificateCard verifyLink="https://www.credly.com/badges/452985ae-2578-44ea-a7ef-d97afe11a10e" certificateName={PwcDA} />
         </div>
       </div>
 
@@ -72,7 +76,7 @@ const CertificationList = () => {
   )
 }
 
- /**Child components Ends here */ 
+/**Child components Ends here */
 
 // const Skill = ({ name, x, y }) => {
 //   return (
