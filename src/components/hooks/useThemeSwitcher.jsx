@@ -1,55 +1,50 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 const useThemeSwitcher = () => {
-
-    const preferDarkQuery = "(prefer-color-scheme:dark)";
-    const [mode, setMode] = useState("");
+    const preferDarkQuery = "(prefers-color-scheme: dark)";
+    const [mode, setMode] = useState(() => {
+        // Check for user preference in local storage or default to media query
+        const userPref = window.localStorage.getItem("theme");
+        if (userPref) {
+            return userPref;
+        }
+        const mediaQuery = window.matchMedia(preferDarkQuery);
+        return mediaQuery.matches ? 'dark' : 'light';
+    });
 
     useEffect(() => {
-
         const mediaQuery = window.matchMedia(preferDarkQuery);
-        const userPref = window.localStorage.getItem("theme");
 
         const handleChange = () => {
-            if (userPref) {
-                let check = userPref === 'dark' ? 'dark' : 'light';
-                setMode(check);
-                if (check === 'dark') {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
+            if (mode === 'dark') {
+                document.documentElement.classList.add('dark');
             } else {
-                let check = mediaQuery.matches ? 'dark' : 'light';
-                setMode(check);
-
-                if (check === 'dark') {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
+                document.documentElement.classList.remove('dark');
             }
-        }
+        };
 
+        // Apply initial theme
         handleChange();
 
+        // Listen for changes in the media query
         mediaQuery.addEventListener("change", handleChange);
 
-        return () => mediaQuery.removeEventListener('change', handleChange);
-    }, [])
-
+        return () => {
+            mediaQuery.removeEventListener("change", handleChange);
+        };
+    }, [mode]);
 
     useEffect(() => {
         if (mode === 'dark') {
             window.localStorage.setItem('theme', 'dark');
             document.documentElement.classList.add('dark');
-        } if (mode === 'light') {
+        } else {
             window.localStorage.setItem('theme', 'light');
             document.documentElement.classList.remove('dark');
         }
-    }, [mode])
+    }, [mode]);
 
-    return [mode, setMode]
-}
+    return [mode, setMode];
+};
 
-export default useThemeSwitcher
+export default useThemeSwitcher;
