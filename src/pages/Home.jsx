@@ -28,7 +28,7 @@ const Home = () => {
                 src={HeroImage}
                 alt='an excited developer'
                 className='w-full h-auto lg:hidden md:inline-block md:w-full'
-                priority
+                priority="true"
                 sizes='(max-widthL768px) 100vw,
                 (max-width:1200px) 60vw,
                 50vw'
