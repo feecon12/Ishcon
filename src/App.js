@@ -11,9 +11,7 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-      <main
-        className={`font-mont bg-light  dark:bg-dark w-full min-h-screen`}
-      >
+      <main className={`font-mont bg-light  dark:bg-dark w-full min-h-screen`}>
         <BrowserRouter>
           <Header />
 
@@ -29,6 +27,9 @@ function App() {
           <Footer />
         </BrowserRouter>
       </main>
+      <div>
+        <a href="https://reactjs.org">learn react</a>
+      </div>
     </>
   );
 }
