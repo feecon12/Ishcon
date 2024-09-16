@@ -7,6 +7,8 @@ import { AnimatedText } from '../components/AnimatedText'
 import { Helmet } from 'react-helmet'
 import TransitionEffect from '../components/TransitionEffect'
 import { Layout } from '../components/Layout'
+import lightBulb from '../assets/images/svgs/bulb.svg'
+import  HireMe  from '../components/HireMe'
 const Home = () => {
   return (
     <>
@@ -38,16 +40,15 @@ const Home = () => {
                 text="Bringing Dreams to Life: Where Vision Meets Code and Design."
                 className='!text-6xl !text-left xl:!text-5xl lg:!text-center  lg:!text-6xl md:!text-6xl sm:!text-3xl'
               />
-              {/* <h1 className='font-bold text-7xl'>Bringing Dreams to Life: Where Vision Meets Code and Design.</h1> */}
               <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
-                With over 4 years of experience in software engineering, I cultivated strong expertise in multiple web based technologies in different industries in healthcare and insurance domains. I have extensive experience from building software to make them production ready. I worked on multiple projects from scratch to production. Along with the traditional web development I have also pitched in to Saas based technologies like Salesforce, and guidewire and understood their basic to advanced implementations in some of the previous projects. I am passionate about building software that is scalable, maintainable and user friendly. I am always eager to learn new technologies and work on challenging projects.
+                With over 4 years of experience in software engineering, I cultivated strong expertise in multiple web based technologies in different industries in healthcare and insurance domains. I have extensive experience from building software to make them production ready. I worked on multiple projects from scratch to production. Along with the traditional web development I have also pitched in to Saas based technologies like Salesforce, and guidewire and understood their basic to advanced implementations in some of the previous projects. I am passionate about building software   that is scalable, maintainable and user friendly. I am always eager to learn new technologies and work on challenging projects.
               </p>
-              <div className='flex items-center self-start mt-2'>
+              <div className='flex items-center self-start mt-2 lg:self-center'>
                 <Link
                   to={Resume}
                   download={true}
                   target='blank'
-                  className='flex items-center bg-dark text-light p-2 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base '
+                  className='flex items-center bg-dark text-light p-2 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base'
                   >
                   Resume
 
@@ -56,13 +57,17 @@ const Home = () => {
 
                 <Link
                   to="/contact"
-                  className='ml-4 text-lg font-medium  capitalize text-dark underline dark:text-light md:text-base'
+                  className='ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base'
                 >
                   Contact
                 </Link>
               </div>
             </div>
 
+          </div>
+          <HireMe />
+          <div className='absolute right-8 bottom-0 inline-block w-24'>
+            <img src={lightBulb} alt="Feecon" className='w-full h-auto md:hidden' />
           </div>
         </Layout>
       </main>

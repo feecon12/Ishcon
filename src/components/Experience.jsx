@@ -40,7 +40,7 @@ const Experience = () => {
 
     const verisysWork = [
         {
-            bullet: "Built and automated web scraping bots to gather  professionals\' data from various sources, streamlining data collection processes."
+            bullet: "Built and automated web scraping bots to gather  professionals' data from various sources, streamlining data collection processes."
         },
         {
             bullet: "Utilized xPath and CSS selector techniques to interact with DOM elements and trigger JavaScript events, improving data extraction accuracy."

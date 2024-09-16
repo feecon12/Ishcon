@@ -73,7 +73,7 @@ export const Header = () => {
   };
   return (
     <header className='w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8'>
-      
+
       <button className=' flex-col justify-center items-center hidden lg:flex' onClick={handleClick}>
         <span className={`bg-dark dark:bg-light  block transistion-all duration-300 ease-out h-0.5 w-6 rounded-sm -translate-y-0.5 ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
         <span className={`bg-dark dark:bg-light  block transistion-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
@@ -83,45 +83,45 @@ export const Header = () => {
       {/* Desktop view */}
       <div className='w-full flex justify-between items-center lg:hidden' >
         <nav>
-        <CustomLink href="/" title="Home" className="mr-4" />
-        <CustomLink href="/about" title="About" className="mx-4" />
-        <CustomLink href="/projects" title="Projects" className="mx-4" />
-        <CustomLink href="/contactus" title="Contact Us" className="ml-4" />
+          <CustomLink href="/" title="Home" className="mr-4" />
+          <CustomLink href="/about" title="About" className="mx-4" />
+          <CustomLink href="/projects" title="Projects" className="mx-4" />
+          <CustomLink href="/contactus" title="Contact Us" className="ml-4" />
         </nav>
 
         <nav className='flex items-center justify-center flex-wrap'>
-        <motion.a href='https://twitter.com'
-          target={'_blank'}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className='w-6 mr-3'
-        >
-          <TwitterIcon />
-        </motion.a>
-        <motion.a
-          href="https://github.com/feecon12"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 mx-3"
-        >
-          <GithubIcon />
-        </motion.a>
-        <motion.a
-          href="https://www.linkedin.com/in/feecon-behera-574009188/"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 m-3"
-        >
-          <LinkedInIcon />
-        </motion.a>
-        <motion.a href='' target={'_blank'} whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className='w-6 mx-3 bg-light rounded-full'>
-          <PinterestIcon />
-        </motion.a>
-        <motion.a href='' target={'_blank'} whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className='w-6 ml-3'>
-          <DribbbleIcon />
-        </motion.a>
+          <motion.a href='https://twitter.com'
+            target={'_blank'}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className='w-6 mr-3'
+          >
+            <TwitterIcon />
+          </motion.a>
+          <motion.a
+            href="https://github.com/feecon12"
+            target={"_blank"}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-6 mx-3"
+          >
+            <GithubIcon />
+          </motion.a>
+          <motion.a
+            href="https://www.linkedin.com/in/feecon-behera-574009188/"
+            target={"_blank"}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-6 m-3"
+          >
+            <LinkedInIcon />
+          </motion.a>
+          <motion.a href='' target={'_blank'} whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className='w-6 mx-3 bg-light rounded-full'>
+            <PinterestIcon />
+          </motion.a>
+          <motion.a href='' target={'_blank'} whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className='w-6 ml-3'>
+            <DribbbleIcon />
+          </motion.a>
 
           <button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
             className={`ml-5 flex items-center justify-center rounded-full p-0.5 
@@ -149,10 +149,13 @@ export const Header = () => {
             <CustomMobileLink href='/' title='Home' className='' toggle={handleClick} />
             <CustomMobileLink href='/about' title='About' className='' toggle={handleClick} />
             <CustomMobileLink href='/projects' title='Projects' className='' toggle={handleClick} />
-            {/* <CustomMobileLink href='/articles' title='Articles' className='' toggle={handleClick} /> */}
+            <CustomMobileLink href='/contactus' title='Contact' className='' toggle={handleClick} />
           </nav>
 
           {/* Social Icons */}
+          <div>
+
+          </div>
           <nav className="flex items-center justify-center flex-wrap mt-2">
             <motion.a href='https://twitter.com' target={'_blank'} whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className='w-6 mr-3 sm:mx-1'>
               <TwitterIcon />
@@ -182,22 +185,23 @@ export const Header = () => {
               <DribbbleIcon />
             </motion.a>
 
-            <button
-              onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-1 flex items-center justify-center rounded-full p-0.5 
-                                ${mode === "light"
-                  ? "bg-light text-dark"
-                  : "bg-dark text-light"
-                }
-                            `}
-            >
-              {mode === "dark" ? (
-                <MoonIcon className={"fill-dark"} />
-              ) : (
-                <SunIcon className={"fill-dark"} />
-              )}
-            </button>
+
           </nav>
+          <button
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            className={`ml-1 flex items-center justify-center rounded-full p-0.5 mt-3
+                                ${mode === "light"
+                ? "bg-light text-dark"
+                : "bg-dark text-light"
+              }
+                            `}
+          >
+            {mode === "dark" ? (
+              <MoonIcon className={"fill-dark"} />
+            ) : (
+              <SunIcon className={"fill-dark"} />
+            )}
+          </button>
         </motion.div>
       ) : null}
 

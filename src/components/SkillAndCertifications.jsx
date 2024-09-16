@@ -39,7 +39,7 @@ const CertificateCard = ({ certificateName, verifyLink }) => {
           <img src={certificateName} alt="certificate icon" />
           {/* <h1 className='text-md'>{title}</h1> */}
         </motion.div>
-        <a href={verifyLink} target="_blank" className="mt-3 text-lg">Verify</a>
+        <a href={verifyLink} target="_blank" className="mt-3 text-lg" rel="noreferrer">Verify</a>
       </div>
     </>
   )
