@@ -114,6 +114,7 @@ const About = () => {
           <SkillAndCertifications />
           <Experience />
           <Education />
+          
         </Layout>
       </main>
     </>
