@@ -10,7 +10,7 @@ const {
   searchMessagerByParams,
   forgetPassword,
   resetPassword,
-} = require("../controllers/messageController");
+} = require("../backend/controllers/messageController");
 
 messageRouter.get("/", searchMessagerByParams);
 messageRouter.get("/", getMessage);
