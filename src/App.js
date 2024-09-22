@@ -7,7 +7,7 @@ import Projects from "./pages/Projects";
 import ErrorPage from "./pages/ErrorPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Login from "./components/Login";
+// import Login from "./components/Login";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
             <Route path="/about" element={<About />}></Route>
             <Route path="/contactus" element={<Contact />}></Route>
             <Route path="/projects" element={<Projects />}></Route>
-            <Route path="/resumebuilder" element={<Login />}></Route>
+            {/* <Route path="/resumebuilder" element={<Login />}></Route> */}
             <Route path="/*" element={<ErrorPage />}></Route>
           </Routes>
 

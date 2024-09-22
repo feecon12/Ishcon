@@ -49,13 +49,13 @@ const Contact = () => {
               <img src={fillForm} alt="fill contact form" width={600} />
             </div>
 
-            <div className="w-1/2 flex flex-col px-10 py-5  self-center lg:w-full lg:text-center">
+            <div className="w-1/2 flex flex-col px-10 py-5 self-center lg:w-full lg:text-center sm:px-0">
               <h1 className="text-7xl font-bold">Contact me</h1>
               <form
                 onSubmit={handleSubmit}
-                className="mt-4 text-xl font-semibold capitalize"
+                className=""
               >
-                <fieldset>
+                <fieldset className="capitalize">
                   <div>
                     <label
                       htmlFor="name"

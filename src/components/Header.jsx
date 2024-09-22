@@ -151,6 +151,7 @@ export const Header = () => {
             <CustomMobileLink href='/about' title='About' className='' toggle={handleClick} />
             <CustomMobileLink href='/projects' title='Projects' className='' toggle={handleClick} />
             <CustomMobileLink href='/contactus' title='Contact' className='' toggle={handleClick} />
+            <CustomMobileLink href='/resumebuilder' title='Resume Builder' className='' toggle={handleClick} />
           </nav>
 
           {/* Social Icons */}

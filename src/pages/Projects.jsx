@@ -12,8 +12,7 @@ const Project = () => {
       <TransitionEffect />
       <main className='text-center justify-center'>
         <Layout>
-
-          <h1 className='dark:text-light'>Pardon, We are working on the page!</h1>
+          <h1 className='dark:text-light'>Work in progress on this page!</h1>
         </Layout>
 
       </main>
