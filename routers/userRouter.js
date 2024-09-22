@@ -10,7 +10,7 @@ const {
   searchUserByParams,
   forgetPassword,
   resetPassword,
-} = require("../controllers/userController");
+} = require("../backend/controllers/userController");
 
 userRouter.get("/", searchUserByParams);
 userRouter.get("/", getUser);
