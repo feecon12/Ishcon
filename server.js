@@ -4,8 +4,8 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const messageRouter = require("./routers/messageRouter");
-const userRouter = require("./routers/userRouter");
+const messageRouter = require("./backend/routers/messageRouter");
+const userRouter = require("./backend/routers/userRouter");
 
 app.use(express.json());
 // Serve static files from the Vite build directory

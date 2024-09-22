@@ -1,7 +1,7 @@
-import { Layout } from "../components/Layout"
+import { Layout } from "./Layout"
 import { useState } from "react"
 import axios from 'axios'
-import Button from "../components/Button"
+import Button from "./Button"
 // import { motion } from "framer-motion"
 
 const Login = () => {
