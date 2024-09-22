@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fbef749d.css",
+    "main.js": "/static/js/main.d2a48770.js",
+    "static/js/453.1ff8f360.chunk.js": "/static/js/453.1ff8f360.chunk.js",
+    "static/media/hero-homepage.png": "/static/media/hero-homepage.7c6e1c6be75d6ef17248.png",
+    "static/media/herocontactpage.png": "/static/media/herocontactpage.d289eb81e559cc5f4bb9.png",
+    "static/media/aws-certified-solutions-architect-associate.png": "/static/media/aws-certified-solutions-architect-associate.9ec3b9b4f4173c2bdee3.png",
+    "static/media/panda-smiling.png": "/static/media/panda-smiling.74df899185941c423b47.png",
+    "static/media/microsoft-certified-azure-fundamentals.png": "/static/media/microsoft-certified-azure-fundamentals.497dd45a7b0355d39a2a.png",
+    "static/media/human-centered-design.png": "/static/media/human-centered-design.2a09b7c2731e53ef121f.png",
+    "static/media/dev-pic.jpg": "/static/media/dev-pic.d692e153f5d69fa5abe2.jpg",
+    "static/media/digital-acumen.png": "/static/media/digital-acumen.5d4ae1f06b64a4d21218.png",
+    "static/media/aws-icon.png": "/static/media/aws-icon.cf11508b23b221836b06.png",
+    "static/media/Resume.pdf": "/static/media/Resume.12f0c4dd7b62642409f6.pdf",
+    "static/media/azureicon.png": "/static/media/azureicon.d68d1da7cce1d79e679a.png",
+    "static/media/react-jsx-logo.png": "/static/media/react-jsx-logo.e71f4c5b0c4306d65355.png",
+    "static/media/nodejs-icon.png": "/static/media/nodejs-icon.749b8af67e60d6b0dcab.png",
+    "static/media/javascript-logo.png": "/static/media/javascript-logo.d0f25c119ad0caefcc37.png",
+    "static/media/mongodb-icon.png": "/static/media/mongodb-icon.b72348a50b5dba41100f.png",
+    "static/media/bulb.svg": "/static/media/bulb.6c3ac7d35534df8ea6b1daee4b0f0ee1.svg",
+    "index.html": "/index.html",
+    "main.fbef749d.css.map": "/static/css/main.fbef749d.css.map",
+    "main.d2a48770.js.map": "/static/js/main.d2a48770.js.map",
+    "453.1ff8f360.chunk.js.map": "/static/js/453.1ff8f360.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbef749d.css",
+    "static/js/main.d2a48770.js"
+  ]
+}
