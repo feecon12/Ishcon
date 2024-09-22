@@ -1,4 +1,4 @@
-import React from "react";
+// import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import JsImg from '../assets/images/skillsImages/javascript-logo.png'
 import ReactImg from '../assets/images/skillsImages/react-jsx-logo.png'
@@ -45,17 +45,28 @@ const CertificateCard = ({ certificateName, verifyLink }) => {
   )
 }
 const SkillList = () => {
+  // const scrollRef = useRef(null);
+  // const scroll = (scrollOffSet) => {
+  //   scrollRef.current.scrollLeft += scrollOffSet;
+  // }
   return (
     <>
       <div className="mt-6 py-4 flex flex-col items-center px-32">
-        <div className="flex mt-2">
-          <SkillsCard title="Javascript" tech={JsImg} />
-          <SkillsCard title="ReactJs" tech={ReactImg} />
-          <SkillsCard title="NodeJS" tech={NodejsImg} />
-          <SkillsCard title="MongoDB" tech={MongoDBImg} />
-          <SkillsCard title="AWS" tech={AwsImg} />
-          <SkillsCard title="Azure" tech={AzureImg} />
+  
+        <div className="relative w-full">
+          {/* <button onClick={() => scroll(-400)} className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-dark text-light p-2 rounded-full shadow-dark dark:bg-light dark:text-dark">{"<"}</button> */}
+            <div className="flex overflow-x-auto space-x-4 p-5">
+              <SkillsCard tech={JsImg} />
+              <SkillsCard tech={ReactImg} />
+              <SkillsCard tech={NodejsImg} />
+              <SkillsCard tech={MongoDBImg} />
+              <SkillsCard tech={AwsImg} />
+              <SkillsCard tech={AzureImg} />
+            
+          </div>
+          {/* <button onClick={() => scroll(-200)} className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-dark text-light p-2 rounded-full shadow-dark dark:bg-light dark:text-dark">{"<"}</button> */}
         </div>
+            
       </div>
     </>
   )
@@ -135,10 +146,9 @@ const SkillAndCertifications = () => {
           <SkillList />
         </div>
         <div className="">
-
-          <CertificationList />
+          <CertificationList /> 
         </div>
-
+          
       </div>
     </>
   );

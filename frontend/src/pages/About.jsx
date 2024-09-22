@@ -9,6 +9,7 @@ import { useEffect, useRef } from "react"
 import { Layout } from "../components/Layout"
 import { AnimatedText } from "../components/AnimatedText"
 
+
 /**Child components starts here */
 const AnimatedNumbers = ({ value }) => {
 

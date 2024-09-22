@@ -17,7 +17,7 @@ app.get("/", function (req, res) {
 });
 
 const PORT = process.env.PORT || 3300;
-const DB_URI=process.env.DB_URI
+const DB_URI = process.env.DB_URI;
 
 // Middleware
 app.use(bodyParser.json());
@@ -25,7 +25,7 @@ app.use(cors());
 
 /** Database connection starts */
 mongoose
-  .connect(DB_URI) 
+  .connect(DB_URI)
   .then(() => {
     console.log("Connection to MongoDB is established!");
   })
@@ -46,4 +46,3 @@ app.use(function (req, res) {
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
 });
-
